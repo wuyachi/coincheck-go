@@ -4,6 +4,7 @@ func main() {
 	client := new(CoinCheck).NewClient("CTBjkbYihKmT-IHR", "DmkP3ChVjOjqieaX-jFnU4XxpSlSgT3M")
 	/** Public API */
 	client.ticker.all()
+	client.rate.buy("plt_jpy")
 	client.trade.all()
 	client.order_book.all()
 

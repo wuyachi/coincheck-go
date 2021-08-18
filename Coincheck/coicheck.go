@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-	"time"
 	"strings"
+	"time"
 )
 
 type CoinCheck struct {
@@ -22,6 +22,7 @@ type CoinCheck struct {
 	leverage Leverage
 	order Order
 	order_book OrderBook
+	rate Rate
 	send Send
 	ticker Ticker
 	trade Trade
@@ -39,6 +40,7 @@ func (c CoinCheck) NewClient(accessKey string, secretKey string) CoinCheck{
 	c.leverage = Leverage{&c}
 	c.order = Order{&c}
 	c.order_book = OrderBook{&c}
+	c.rate=Rate{&c}
 	c.send = Send{&c}
 	c.ticker = Ticker{&c}
 	c.trade = Trade{&c}
